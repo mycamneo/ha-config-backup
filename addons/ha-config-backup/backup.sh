@@ -33,6 +33,8 @@ DEST="$REPO/homeassistant"
 mkdir -p "$WORK" "$DEST"
 
 if [ ! -d "$REPO/.git" ]; then
+  # clear any stale/partial dir from a previous boot, then clone fresh
+  rm -rf "$REPO"
   git clone -q --branch "$BRANCH" --single-branch "$REPO_URL" "$REPO" || { echo "clone failed" >&2; exit 2; }
 else
   ( cd "$REPO" && git fetch -q origin "$BRANCH" ) || true

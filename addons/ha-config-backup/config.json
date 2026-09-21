@@ -1,6 +1,6 @@
 {
   "name": "HA Config GitHub Backup",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "slug": "ha_config_backup",
   "description": "Publish-safe HA config snapshot (homeassistant/ in a GitHub repo) on an in-HA scheduler. Self-contained: runs entirely inside HA, no agent/botpc dependency.",
   "url": "https://github.com/mycamneo/ha-config-backup",
