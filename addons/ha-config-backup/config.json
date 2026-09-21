@@ -6,8 +6,12 @@
   "url": "https://github.com/mycamneo/ha-config-backup",
   "startup": "application",
   "boot": "auto",
-  "arch": ["amd64"],
-  "map": ["config:rw"],
+  "arch": [
+    "amd64"
+  ],
+  "map": [
+    "config:rw"
+  ],
   "options": {
     "repository": "https://github.com/myCAMSG/local-dev.git",
     "branch": "main",
@@ -33,6 +37,11 @@
     "git_name": "str",
     "git_email": "email",
     "interval_minutes": "int",
-    "files": ["str"]
+    "files": [
+      "str"
+    ]
+  },
+  "build_from": {
+    "amd64": "alpine:3.20"
   }
 }

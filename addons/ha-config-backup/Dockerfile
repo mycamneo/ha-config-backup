@@ -1,4 +1,4 @@
-ARG BUILD_FROM
+ARG BUILD_FROM=alpine:3.20
 FROM ${BUILD_FROM}
 
 RUN apk add --no-cache git openssh-client jq bash
