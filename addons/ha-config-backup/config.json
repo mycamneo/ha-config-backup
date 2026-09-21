@@ -28,11 +28,11 @@
   },
   "schema": {
     "repository": "url",
-    "branch": "string",
+    "branch": "str",
     "token": "password",
-    "git_name": "string",
+    "git_name": "str",
     "git_email": "email",
     "interval_minutes": "int",
-    "files": ["string"]
+    "files": ["str"]
   }
 }
