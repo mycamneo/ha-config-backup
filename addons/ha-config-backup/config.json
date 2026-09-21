@@ -1,0 +1,38 @@
+{
+  "name": "HA Config GitHub Backup",
+  "version": "0.1.0",
+  "slug": "ha_config_backup",
+  "description": "Publish-safe HA config snapshot (homeassistant/ in a GitHub repo) on an in-HA scheduler. Self-contained: runs entirely inside HA, no agent/botpc dependency.",
+  "url": "https://github.com/mycamneo/ha-config-backup",
+  "startup": "application",
+  "boot": "auto",
+  "arch": ["amd64"],
+  "map": ["config:rw"],
+  "options": {
+    "repository": "https://github.com/myCAMSG/local-dev.git",
+    "branch": "main",
+    "token": "",
+    "git_name": "Neo",
+    "git_email": "neo_bot@mycamservices.com",
+    "interval_minutes": 360,
+    "files": [
+      "configuration.yaml",
+      "automations.yaml",
+      "scripts.yaml",
+      "scenes.yaml",
+      "blueprints",
+      "www",
+      "voice_satellite",
+      "localtuya-devices.json"
+    ]
+  },
+  "schema": {
+    "repository": "url",
+    "branch": "string",
+    "token": "password",
+    "git_name": "string",
+    "git_email": "email",
+    "interval_minutes": "int",
+    "files": ["string"]
+  }
+}
